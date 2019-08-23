@@ -102,3 +102,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+get_pepagespeed
+response.p
+response.txt
+inlist.csv
