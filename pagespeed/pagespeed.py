@@ -1,6 +1,21 @@
 import requests
 from pagespeed.responses import DesktopPageSpeed, MobilePageSpeed
+import logging
+import os
 
+# make logger errors and save in to file
+try:
+    logging.basicConfig(
+        level=logging.ERROR,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler('logs/errors.log', encoding='utf-8'),
+            logging.StreamHandler()
+        ]
+    )
+except FileNotFoundError:
+    print('Not found logs dir. Add...')
+    os.makedirs('logs')
 
 class PageSpeed(object):
     """Google PageSpeed analysis client
@@ -40,9 +55,9 @@ class PageSpeed(object):
         strategy = strategy.lower()
         if strategy not in ('mobile', 'desktop'):
             raise ValueError('invalid strategy: {0}'.format(strategy))
-        print('Getting data from page speed...')
+        logging.info('Getting data from page speed...')
         raw = requests.get(self.endpoint, params=params)
-        print('Data while receive.')
+        logging.info('Data while receive.')
 
         if strategy == 'mobile':
             response = MobilePageSpeed(raw)
