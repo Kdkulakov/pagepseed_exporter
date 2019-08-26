@@ -212,10 +212,6 @@ class LighthouseResultAudits(object):
         return self.metrics.get('interactive')
 
     @property
-    def third_party_summary(self):
-        return self.metrics.get('third-party-summary')
-
-    @property
     def speed_index(self):
         return self.metrics.get('speed-index')
 
@@ -261,11 +257,7 @@ class LighthouseResultAudits(object):
 
     @ property
     def max_potential_fid(self):
-        return self.metrics.get('uses-long-cache-ttl')
-
-    @ property
-    def max_potential_fid(self):
-        return self.metrics.get('uses-long-cache-ttl')
+        return self.metrics.get('max-potential-fid')
 
     @ property
     def total_blocking_time(self):
