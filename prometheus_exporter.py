@@ -5,7 +5,7 @@ from pagespeed import PageSpeed
 import csv
 import logging
 from importlib import reload  # need to reload logging module
-
+import re
 reload(logging)
 
 
@@ -43,17 +43,17 @@ first_meaningful_paint_displayvalue = Gauge('pagespeed_first_meaningful_paint_di
 first_meaningful_paint_info = Info('pagespeed_first_meaningful_paint', '')
 
 render_blocking_resources = Gauge('pagespeed_render_blocking_resources', '', ['url'])
-render_blocking_resources_overall = Gauge('pagespeed_render_blocking_resources_overall', '', ['url'])
+render_blocking_resources_overall = Gauge('pagespeed_render_blocking_resources_overall', '', ['url', 'type', 'id'])
 render_blocking_resources_displayvalue = Gauge('pagespeed_render_blocking_resources_displayvalue', '', ['url', 'displayValue'])
 render_blocking_resources_info = Info('pagespeed_render_blocking_resources', '')
 
 uses_text_compression = Gauge('pagespeed_uses_text_compression', '', ['url'])
-uses_text_compression_overall = Gauge('pagespeed_uses_text_compression_overall', '', ['url'])
+uses_text_compression_overall = Gauge('pagespeed_uses_text_compression_overall', '', ['url', 'type', 'id'])
 # uses_text_compression_displayvalue = Gauge('pagespeed_uses_text_compression_displayvalue', '', ['url', 'displayValue']) # no metric
 uses_text_compression_info = Info('pagespeed_uses_text_compression', '')
 
 uses_optimized_images = Gauge('pagespeed_uses_optimized_images', '', ['url'])
-uses_optimized_images_overall = Gauge('pagespeed_uses_optimized_images_overall', '', ['url'])
+uses_optimized_images_overall = Gauge('pagespeed_uses_optimized_images_overall', '', ['url', 'type', 'id'])
 # uses_text_compression_displayvalue = Gauge('pagespeed_uses_text_compression_displayvalue', '', ['url', 'displayValue'])
 uses_optimized_images_info = Info('pagespeed_uses_optimized_images', '')
 
@@ -70,15 +70,17 @@ total_blocking_time_displayvalue = Gauge('pagespeed_total_blocking_time_displayv
 total_blocking_time_info = Info('pagespeed_total_blocking_time', '')
 
 estimated_input_latency = Gauge('pagespeed_estimated_input_latency_time', '', ['url'])
-estimated_input_latency_displayvalue = Gauge('pagespeed_estimated_input_latency_displayvalue', '', ['url', 'displayValue'])
+estimated_input_latency_displayvalue = Gauge('pagespeed_estimated_input_latency_displayvalue', '', ['url'])
 estimated_input_latency_info = Info('pagespeed_estimated_input_latency', '')
 
 uses_rel_preconnect = Gauge('pagespeed_uses_rel_preconnect', '', ['url'])
+uses_rel_preconnect_overall = Gauge('pagespeed_uses_rel_preconnect_overall', '', ['url', 'type', 'id'])
 # uses_rel_preconnect_displayvalue = Gauge('pagespeed_uses_rel_preconnect_displayvalue', '', ['url']) # no metric
 uses_rel_preconnect_info = Info('pagespeed_uses_rel_preconnect', '')
 
 bootup_time = Gauge('pagespeed_bootup_time', '', ['url'])
-bootup_time_displayvalue = Gauge('pagespeed_bootup_time_displayvalue', '', ['url', 'displayValue'])
+bootup_time_wastedms = Gauge('pagespeed_bootup_time_wastedms', '', ['url', 'id'])
+bootup_time_displayvalue = Gauge('pagespeed_bootup_time_displayvalue', '', ['url'])
 bootup_time_info = Info('pagespeed_bootup_time', '')
 
 unminified_css = Gauge('pagespeed_unminified_css', '', ['url'])
@@ -86,7 +88,7 @@ unminified_css_displayvalue = Gauge('pagespeed_unminified_css_displayvalue', '',
 unminified_css_info = Info('pagespeed_unminified_css', '')
 
 # network_server_latency = Gauge('pagespeed_network_server_latency', '', ['url'])  # null type - not to get
-network_server_latency_displayvalue = Gauge('pagespeed_network_server_latency_displayvalue', '', ['url', 'displayValue'])
+network_server_latency_displayvalue = Gauge('pagespeed_network_server_latency_displayvalue', '', ['url'])
 network_server_latency_info = Info('pagespeed_network_server_latency', '')
 
 offscreen_images = Gauge('pagespeed_offscreen_images', '', ['url'])
@@ -98,7 +100,7 @@ uses_responsive_images = Gauge('pagespeed_uses_responsive_images', '', ['url'])
 uses_responsive_images_info = Info('pagespeed_uses_responsive_images', '')
 
 unused_css_rules = Gauge('pagespeed_unused_css_rules', '', ['url'])
-unused_css_rules_overall = Gauge('pagespeed_unused_css_rules_overall', '', ['url'])
+unused_css_rules_overall = Gauge('pagespeed_unused_css_rules_overall', '', ['url', 'type', 'id'])
 # unused_css_rules_displayvalue = Gauge('pagespeed_unused_css_rules_displayvalue', '', ['url', 'displayValue'])
 unused_css_rules_info = Info('pagespeed_unused_css_rules', '')
 
@@ -115,20 +117,23 @@ dom_size_displayvalue = Gauge('pagespeed_dom_size_displayvalue', '', ['url'])
 dom_size_info = Info('pagespeed_dom_size', '')
 
 uses_rel_preload = Gauge('pagespeed_uses_rel_preload', '', ['url'])
+uses_rel_preload_overall = Gauge('pagespeed_uses_rel_preload_overall', '', ['url', 'type', 'id'])
 # uses_rel_preload_displayvalue = Gauge('pagespeed_uses_rel_preload_displayvalue', '', ['url'])
 uses_rel_preload_info = Info('pagespeed_uses_rel_preload', '')
 
 unminified_javascript = Gauge('pagespeed_unminified_javascript', '', ['url'])
-unminified_javascript_overall = Gauge('pagespeed_unminified_javascript_overall', '', ['url'])
+unminified_javascript_overall = Gauge('pagespeed_unminified_javascript_overall_seconds', '', ['url', 'type', 'id'])
 unminified_javascript_displayvalue = Gauge('pagespeed_unminified_javascript_displayvalue', '', ['url'])
 unminified_javascript_info = Info('pagespeed_unminified_javascript', '')
 
 redirects = Gauge('pagespeed_redirects', '', ['url'])
-redirects_overall = Gauge('pagespeed_redirects_overall', '', ['url'])
+redirects_overall = Gauge('pagespeed_redirects_overall', '', ['url', 'type', 'id'])
 redirects_displayvalue = Gauge('pagespeed_redirects_displayvalue', '', ['url'])
 redirects_info = Info('pagespeed_redirects', '')
 
 total_time_page_load = Gauge('pagespeed_total_time_page_load', '  время загрузки всей страницы в ms', ['url'])
+performance_page_score = Gauge('pagespeed_total_performance_score', 'основная собирательная метрика производительности'
+                                                                    'страницы', ['url'])
 
 # make logger errors and save in to file
 try:
@@ -167,19 +172,28 @@ def process_request():
             
             results = response_desktop.lighthouse_results
             audits_results = response_desktop.lighthouse_results_audits
+            categories = response_desktop.categories
 
             # Total time page of load
             lighthouse_total_time_page_load = results.timing['total']
             total_time_page_load.labels(url).set(lighthouse_total_time_page_load)
 
+            # Main Performance page score
+            lighthouse_total_performance_score = categories.performance['score']
+            performance_page_score.labels(url).set(lighthouse_total_performance_score)
 
             # Time to interactive metric
             lighthouse_time_to_interactive_score = audits_results.interactive['score']
             time_to_interactive.labels(url).set(lighthouse_time_to_interactive_score)
 
-            lighthouse_time_to_interactive_display = audits_results.interactive['displayValue']
-            display_value = float(lighthouse_time_to_interactive_display[:3])
-            time_to_interactive_displayvalue.labels(url).set(display_value)
+            try:
+                lighthouse_time_to_interactive_display = audits_results.interactive['displayValue']
+                display_value = re.match(r"[0-9]+\.*\,*[0-9]*", lighthouse_time_to_interactive_display)
+                time_to_interactive_displayvalue.labels(url).set(float(display_value.group(0)))
+            except Exception as err:
+                logging.error(f'Time to interactive error: {str(err)}')
+                time_to_interactive_displayvalue.labels(url).set(0)
+                pass
 
             lighthouse_time_to_interactive_title = audits_results.interactive['title']
             lighthouse_time_to_interactive_description = audits_results.interactive['description']
@@ -194,9 +208,14 @@ def process_request():
             lighthouse_speed_index_score = audits_results.speed_index['score']
             speed_index.labels(url).set(lighthouse_speed_index_score)
 
-            lighthouse_speed_index_display = audits_results.speed_index['displayValue']
-            display_value = float(lighthouse_speed_index_display[:3])
-            speed_index_displayvalue.labels(url).set(display_value)
+            try:
+                lighthouse_speed_index_display = audits_results.speed_index['displayValue']
+                display_value = float(lighthouse_speed_index_display[:3])
+                speed_index_displayvalue.labels(url).set(display_value)
+            except Exception as err:
+                logging.error(f'speed index error: {str(err)}')
+                speed_index_displayvalue.labels(url).set(0)
+                pass
 
             lighthouse_speed_index_title = audits_results.speed_index['title']
             lighthouse_speed_index_description = audits_results.speed_index['description']
@@ -210,10 +229,14 @@ def process_request():
             # first cpu idle metric
             lighthouse_first_cpu_idle_score = audits_results.first_cpu_idle['score']
             first_cpu_idle_score.labels(url).set(lighthouse_first_cpu_idle_score)
-
-            lighthouse_first_cpu_idle_display = audits_results.first_cpu_idle['displayValue']
-            display_value = float(lighthouse_first_cpu_idle_display[:3])
-            first_cpu_idle_score_displayvalue.labels(url).set(display_value)
+            try:
+                lighthouse_first_cpu_idle_display = audits_results.first_cpu_idle['displayValue']
+                display_value = float(lighthouse_first_cpu_idle_display[:3])
+                first_cpu_idle_score_displayvalue.labels(url).set(display_value)
+            except Exception as err:
+                logging.error(f'first_cpu_idle error: {str(err)}')
+                first_cpu_idle_score_displayvalue.labels(url).set(0)
+                pass
 
             lighthouse_first_cpu_idle_title = audits_results.first_cpu_idle['title']
             lighthouse_first_cpu_idle_description = audits_results.first_cpu_idle['description']
@@ -228,9 +251,14 @@ def process_request():
             lighthouse_mainthread_work_breakdown_score = audits_results.mainthread_work_breakdown['score']
             mainthread_work_breakdown.labels(url).set(lighthouse_mainthread_work_breakdown_score)
 
-            lighthouse_mainthread_work_breakdown_display = audits_results.mainthread_work_breakdown['displayValue']
-            display_value = float(lighthouse_mainthread_work_breakdown_display[:3])
-            mainthread_work_breakdown_displayvalue.labels(url).set(display_value)
+            try:
+                lighthouse_mainthread_work_breakdown_display = audits_results.mainthread_work_breakdown['displayValue']
+                display_value = float(lighthouse_mainthread_work_breakdown_display[:3])
+                mainthread_work_breakdown_displayvalue.labels(url).set(display_value)
+            except Exception as err:
+                logging.error(f'mainthread_work_breakdown error: {str(err)}')
+                mainthread_work_breakdown_displayvalue.labels(url).set(0)
+                pass
 
             lighthouse_mainthread_work_breakdown_title = audits_results.mainthread_work_breakdown['title']
             lighthouse_mainthread_work_breakdown_description = audits_results.mainthread_work_breakdown['description']
@@ -245,9 +273,14 @@ def process_request():
             lighthouse_first_contentful_paint_score = audits_results.first_contentful_paint['score']
             first_contentful_paint.labels(url).set(lighthouse_first_contentful_paint_score)
 
-            lighthouse_first_contentful_paint_display = audits_results.first_contentful_paint['displayValue']
-            display_value = float(lighthouse_first_contentful_paint_display[:3])
-            first_contentful_paint_displayvalue.labels(url).set(display_value)
+            try:
+                lighthouse_first_contentful_paint_display = audits_results.first_contentful_paint['displayValue']
+                display_value = float(lighthouse_first_contentful_paint_display[:3])
+                first_contentful_paint_displayvalue.labels(url).set(display_value)
+            except Exception as err:
+                logging.error(f'first_contentful_paint error: {str(err)}')
+                first_contentful_paint_displayvalue.labels(url).set(0)
+                pass
 
             lighthouse_first_contentful_paint_title = audits_results.first_contentful_paint['title']
             lighthouse_first_contentful_paint_description = audits_results.first_contentful_paint['description']
@@ -261,10 +294,14 @@ def process_request():
             # first_meaningful_paint metric
             lighthouse_first_meaningful_paint_score = audits_results.first_meaningful_paint['score']
             first_meaningful_paint.labels(url).set(lighthouse_first_meaningful_paint_score)
-
-            lighthouse_first_meaningful_paint_display = audits_results.first_meaningful_paint['displayValue']
-            display_value = float(lighthouse_first_meaningful_paint_display[:3])
-            first_meaningful_paint_displayvalue.labels(url).set(display_value)
+            try:
+                lighthouse_first_meaningful_paint_display = audits_results.first_meaningful_paint['displayValue']
+                display_value = float(lighthouse_first_meaningful_paint_display[:3])
+                first_meaningful_paint_displayvalue.labels(url).set(display_value)
+            except Exception as err:
+                logging.error(f'first_meaningful_paint error: {str(err)}')
+                first_meaningful_paint_displayvalue.labels(url).set(0)
+                pass
 
             lighthouse_first_meaningful_paint_title = audits_results.first_meaningful_paint['title']
             lighthouse_first_meaningful_paint_description = audits_results.first_meaningful_paint['description']
@@ -279,12 +316,17 @@ def process_request():
             lighthouse_render_blocking_resources_score = audits_results.render_blocking_resources['score']
             render_blocking_resources.labels(url).set(lighthouse_render_blocking_resources_score)
 
-            lighthouse_render_blocking_resources_display = audits_results.render_blocking_resources['displayValue']
-            display_value = lighthouse_render_blocking_resources_display
-            render_blocking_resources_displayvalue.labels(url, display_value)
+            # try:
+            #     lighthouse_render_blocking_resources_display = audits_results.render_blocking_resources['displayValue']
+            #     display_value = lighthouse_render_blocking_resources_display
+            #     render_blocking_resources_displayvalue.labels(url).set(display_value)
+            # except Exception as err:
+            #     logging.error(f'render_blocking_resources error: {str(err)}')
+            #     render_blocking_resources_displayvalue.labels(url).set(0)
+            #     pass
 
             lighthouse_render_blocking_resources_overall = audits_results.render_blocking_resources['details']['overallSavingsMs']
-            render_blocking_resources_overall.labels(url).set(lighthouse_render_blocking_resources_overall)
+            render_blocking_resources_overall.labels(url, 'overall', 'render_blocking_resources').set(lighthouse_render_blocking_resources_overall)
 
             lighthouse_render_blocking_resources_title = audits_results.render_blocking_resources['title']
             lighthouse_render_blocking_resources_description = audits_results.render_blocking_resources['description']
@@ -304,7 +346,7 @@ def process_request():
             # uses_text_compression_displayvalue.labels(url, display_value)  # no metric
 
             lighthouse_uses_text_compression_overall = audits_results.uses_text_compression['details']['overallSavingsMs']
-            uses_text_compression_overall.labels(url).set(lighthouse_uses_text_compression_overall)
+            uses_text_compression_overall.labels(url, 'overall', 'uses_text_compression').set(lighthouse_uses_text_compression_overall)
 
             lighthouse_uses_text_compression_title = audits_results.uses_text_compression['title']
             lighthouse_uses_text_compression_description = audits_results.uses_text_compression['description']
@@ -324,7 +366,7 @@ def process_request():
             # uses_text_compression_displayvalue.labels(url, display_value)  #no metric
 
             lighthouse_uses_optimized_images_overall = audits_results.uses_optimized_images['details']['overallSavingsMs']
-            uses_optimized_images_overall.labels(url).set(lighthouse_uses_optimized_images_overall)
+            uses_optimized_images_overall.labels(url, 'overall', 'uses_optimized_images').set(lighthouse_uses_optimized_images_overall)
 
             lighthouse_uses_optimized_images_title = audits_results.uses_optimized_images['title']
             lighthouse_uses_optimized_images_description = audits_results.uses_optimized_images['description']
@@ -339,9 +381,14 @@ def process_request():
             lighthouse_uses_long_cache_ttl_score = audits_results.uses_long_cache_ttl['score']
             uses_long_cache_ttl.labels(url).set(lighthouse_uses_long_cache_ttl_score)
 
-            lighthouse_uses_long_cache_ttl_display = audits_results.uses_long_cache_ttl['displayValue']
-            display_value = lighthouse_uses_long_cache_ttl_display
-            render_blocking_resources_displayvalue.labels(url, display_value)
+            # try:
+            #     lighthouse_uses_long_cache_ttl_display = audits_results.uses_long_cache_ttl['displayValue']
+            #     display_value = lighthouse_uses_long_cache_ttl_display
+            #     uses_long_cache_ttl_displayvalue.labels(url).set(display_value)
+            # except Exception as err:
+            #     logging.error(f'uses_long_cache_ttl error: {str(err)}')
+            #     uses_long_cache_ttl_displayvalue.labels(url).set(0)
+            #     pass
 
             lighthouse_uses_long_cache_ttl_title = audits_results.uses_long_cache_ttl['title']
             lighthouse_uses_long_cache_ttl_description = audits_results.uses_long_cache_ttl['description']
@@ -355,10 +402,13 @@ def process_request():
             # max_potential_fid metric
             lighthouse_max_potential_fid_score = audits_results.max_potential_fid['score']
             max_potential_fid.labels(url).set(lighthouse_max_potential_fid_score)
-
-            lighthouse_max_potential_fid_display = audits_results.max_potential_fid['displayValue']
-            display_value = float(lighthouse_max_potential_fid_display[:3].replace(',','.'))
-            max_potential_fid_displayvalue.labels(url).set(display_value)
+            try:
+                lighthouse_max_potential_fid_display = audits_results.max_potential_fid['displayValue']
+                display_value = float(lighthouse_max_potential_fid_display[:3].replace(',','.'))
+                max_potential_fid_displayvalue.labels(url).set(display_value)
+            except Exception as err:
+                logging.error(f'max_potential_fid err: {str(err)}')
+                pass
 
             lighthouse_max_potential_fid_title = audits_results.max_potential_fid['title']
             lighthouse_max_potential_fid_description = audits_results.max_potential_fid['description']
@@ -389,10 +439,14 @@ def process_request():
             # estimated_input_latency metric
             lighthouse_estimated_input_latency_score = audits_results.estimated_input_latency['score']
             estimated_input_latency.labels(url).set(lighthouse_estimated_input_latency_score)
-
-            lighthouse_estimated_input_latency_display = audits_results.estimated_input_latency['displayValue']
-            display_value = lighthouse_estimated_input_latency_display
-            estimated_input_latency_displayvalue.labels(url, display_value)
+            try:
+                lighthouse_estimated_input_latency_display = audits_results.estimated_input_latency['displayValue']
+                display_value = float(lighthouse_estimated_input_latency_display[:3])
+                estimated_input_latency_displayvalue.labels(url).set(display_value)
+            except Exception as err:
+                logging.error(f'estimated_input_latency error: {str(err)}')
+                estimated_input_latency_displayvalue.labels(url).set(0)
+                pass
 
             lighthouse_estimated_input_latency_title = audits_results.estimated_input_latency['title']
             lighthouse_estimated_input_latency_description = audits_results.estimated_input_latency['description']
@@ -411,6 +465,9 @@ def process_request():
             # display_value = lighthouse_uses_rel_preconnect_display
             # uses_rel_preconnect_displayvalue.labels(url, display_value)  # no metric
 
+            lighthouse_uses_rel_preconnect_overall = audits_results.uses_rel_preconnect['details']['overallSavingsMs']
+            uses_rel_preconnect_overall.labels(url, 'overall', 'uses_rel_preconnect').set(lighthouse_uses_rel_preconnect_overall)
+
             lighthouse_uses_rel_preconnect_title = audits_results.uses_rel_preconnect['title']
             lighthouse_uses_rel_preconnect_description = audits_results.uses_rel_preconnect['description']
 
@@ -424,9 +481,18 @@ def process_request():
             lighthouse_bootup_time_score = audits_results.bootup_time['score']
             bootup_time.labels(url).set(lighthouse_bootup_time_score)
 
-            lighthouse_bootup_time_display = audits_results.bootup_time['displayValue']
-            display_value = lighthouse_bootup_time_display
-            bootup_time_displayvalue.labels(url, display_value)
+
+            try:
+                lighthouse_bootup_time_display = audits_results.bootup_time['displayValue']
+                display_value = float(lighthouse_bootup_time_display[:3])
+                bootup_time_displayvalue.labels(url).set(display_value)
+            except Exception as err:
+                logging.error(f'bootup_time error: {str(err)}')
+                bootup_time_displayvalue.labels(url).set(0)
+                pass
+
+            lighthouse_bootup_time_wastedms = audits_results.bootup_time['details']['summary']['wastedMs']
+            bootup_time_wastedms.labels(url, 'bootup_time').set(lighthouse_bootup_time_wastedms)
 
             lighthouse_bootup_time_title = audits_results.bootup_time['title']
             lighthouse_bootup_time_description = audits_results.bootup_time['description']
@@ -457,10 +523,14 @@ def process_request():
             # network_server_latency metric
             # lighthouse_network_server_latency_score = audits_results.network_server_latency['score']
             # network_server_latency.labels(url).set(lighthouse_network_server_latency_score)
-
-            lighthouse_network_server_latency_display = audits_results.network_server_latency['displayValue']
-            display_value = lighthouse_network_server_latency_display
-            network_server_latency_displayvalue.labels(url, display_value)
+            try:
+                lighthouse_network_server_latency_display = audits_results.network_server_latency['displayValue']
+                display_value = re.match(r"[0-9]+\.*\,*[0-9]*", lighthouse_network_server_latency_display)
+                network_server_latency_displayvalue.labels(url).set(float(display_value.group(0)))
+            except Exception as err:
+                logging.error(f'network_server_latency error: {str(err)}')
+                network_server_latency_displayvalue.labels(url).set(0)
+                pass
 
             lighthouse_network_server_latency_title = audits_results.network_server_latency['title']
             lighthouse_network_server_latency_description = audits_results.network_server_latency['description']
@@ -475,9 +545,14 @@ def process_request():
             lighthouse_offscreen_images_score = audits_results.offscreen_images['score']
             offscreen_images.labels(url).set(lighthouse_offscreen_images_score)
 
-            lighthouse_offscreen_images_display = audits_results.offscreen_images['displayValue']
-            display_value = lighthouse_offscreen_images_display
-            offscreen_images_displayvalue.labels(url, display_value)
+            try:
+                lighthouse_offscreen_images_display = audits_results.offscreen_images['displayValue']
+                display_value = lighthouse_offscreen_images_display
+                offscreen_images_displayvalue.labels(url, display_value)
+            except Exception as err:
+                logging.error(f'Offscreen_images error: {str(err)}')
+                offscreen_images_displayvalue.labels(url, '0')
+                pass
 
             lighthouse_offscreen_images_title = audits_results.offscreen_images['title']
             lighthouse_offscreen_images_description = audits_results.offscreen_images['description']
@@ -514,7 +589,7 @@ def process_request():
             # unused_css_rules_displayvalue.labels(url, display_value)  # no metric
 
             lighthouse_unused_css_rules_overall = audits_results.unused_css_rules['details']['overallSavingsMs']
-            uses_optimized_images_overall.labels(url).set(lighthouse_unused_css_rules_overall)
+            uses_optimized_images_overall.labels(url, 'overall', 'unused_css_rules').set(lighthouse_unused_css_rules_overall)
 
             lighthouse_unused_css_rules_title = audits_results.unused_css_rules['title']
             lighthouse_unused_css_rules_description = audits_results.unused_css_rules['description']
@@ -524,7 +599,6 @@ def process_request():
                 'description': lighthouse_unused_css_rules_description,
                 'url': url
             })
-
 
             # Total byte weight metric
             lighthouse_total_byte_weight_score = audits_results.total_byte_weight['score']
@@ -564,9 +638,14 @@ def process_request():
             lighthouse_dom_size_score = audits_results.dom_size['score']
             dom_size.labels(url).set(lighthouse_dom_size_score)
 
-            lighthouse_dom_size_display = audits_results.dom_size['displayValue']
-            display_value = float(lighthouse_dom_size_display[:3].replace(',', '.'))
-            dom_size_displayvalue.labels(url).set(display_value)
+            try:
+                lighthouse_dom_size_display = audits_results.dom_size['displayValue']
+                display_value = re.match(r"[0-9]+\.*\,*[0-9]*", lighthouse_dom_size_display)
+                dom_size_displayvalue.labels(url).set(float(display_value.group(0).replace(',','.')))
+            except Exception as err:
+                logging.error(f'dom_siz error: {str(err)}')
+                offscreen_images_displayvalue.labels(url, '0')
+                pass
 
             lighthouse_dom_size_title = audits_results.dom_size['title']
             lighthouse_dom_size_description = audits_results.dom_size['description']
@@ -585,6 +664,9 @@ def process_request():
             # display_value = float(lighthouse_uses_rel_preload_display[:3].replace(',', '.'))
             # uses_rel_preload_displayvalue.labels(url).set(display_value)
 
+            lighthouse_uses_rel_preload_overall = audits_results.uses_rel_preload['details']['overallSavingsMs']
+            uses_rel_preload_overall.labels(url, 'overall', 'uses_rel_preload').set(lighthouse_uses_rel_preload_overall)
+
             lighthouse_uses_rel_preload_title = audits_results.uses_rel_preload['title']
             lighthouse_uses_rel_preload_description = audits_results.uses_rel_preload['description']
 
@@ -598,8 +680,9 @@ def process_request():
             lighthouse_unminified_javascript_score = audits_results.unminified_javascript['score']
             unminified_javascript.labels(url).set(lighthouse_unminified_javascript_score)
 
+
             lighthouse_unminified_javascript_overall = audits_results.unminified_javascript['details']['overallSavingsMs']
-            unminified_javascript_overall.labels(url).set(lighthouse_unminified_javascript_overall)
+            unminified_javascript_overall.labels(url, 'overall', 'unminified_javascript').set(lighthouse_unminified_javascript_overall)
 
             # lighthouse_unminified_javascript_display = audits_results.unminified_javascript['displayValue']
             # display_value = float(lighthouse_unminified_javascript_display[:3].replace(',', '.'))
@@ -619,7 +702,7 @@ def process_request():
             redirects.labels(url).set(lighthouse_redirects_score)
 
             lighthouse_redirects_overall = audits_results.redirects['details']['overallSavingsMs']
-            redirects_overall.labels(url).set(lighthouse_redirects_overall)
+            redirects_overall.labels(url, 'overall', 'redirects').set(lighthouse_redirects_overall)
 
             # lighthouse_unminified_javascript_display = audits_results.unminified_javascript['displayValue']
             # display_value = float(lighthouse_unminified_javascript_display[:3].replace(',', '.'))

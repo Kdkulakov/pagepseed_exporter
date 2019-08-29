@@ -82,7 +82,7 @@ class PageSpeedResponse(Response):
 
     @property
     def categories(self):
-        metrics = self.json.get('categories')
+        metrics = self.json.get('lighthouseResult').get('categories')
         return Categories(metrics)
 
     def to_csv(self, path):
