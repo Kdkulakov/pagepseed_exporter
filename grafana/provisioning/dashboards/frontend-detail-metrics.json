@@ -6857,8 +6857,8 @@
         "allValue": null,
         "current": {
           "tags": [],
-          "text": "https://www.reg.ru/",
-          "value": "https://www.reg.ru/"
+          "text": "",
+          "value": ""
         },
         "datasource": "Prometheus-pagespeed",
         "definition": "pagespeed_speedindex",
@@ -6936,7 +6936,7 @@
     ]
   },
   "timezone": "",
-  "title": "REG.RU - pagespeed - detail",
+  "title": "pagespeed - detail",
   "uid": "9mhrQ0dWk",
   "version": 71
 }
