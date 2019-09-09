@@ -16,8 +16,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 21,
-  "iteration": 1567067159771,
+  "id": 1,
+  "iteration": 1568034843776,
   "links": [],
   "panels": [
     {
@@ -40,6 +40,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
+      "datasource": "Prometheus-pagespeed",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -92,11 +93,28 @@
       "tableColumn": "",
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_total_performance_score{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "instant": true,
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -126,6 +144,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
+      "datasource": "Prometheus-pagespeed",
       "description": "",
       "format": "none",
       "gauge": {
@@ -180,11 +199,28 @@
       "tableColumn": "",
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_first_contentful_paint{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "instant": true,
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -214,6 +250,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
+      "datasource": "Prometheus-pagespeed",
       "description": "",
       "format": "none",
       "gauge": {
@@ -269,11 +306,28 @@
       "tableColumn": "",
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_speedindex{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "instant": true,
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -297,6 +351,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "fill": 1,
       "gridPos": {
         "h": 9,
@@ -329,10 +384,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_total_performance_score{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -413,6 +485,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
+      "datasource": "Prometheus-pagespeed",
       "description": "",
       "format": "none",
       "gauge": {
@@ -467,11 +540,28 @@
       "tableColumn": "",
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_first_meaningful_paint{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "instant": true,
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -501,6 +591,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
+      "datasource": "Prometheus-pagespeed",
       "description": "",
       "format": "none",
       "gauge": {
@@ -555,11 +646,28 @@
       "tableColumn": "",
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_mainthread_work_breakdown{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "instant": true,
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -589,6 +697,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
+      "datasource": "Prometheus-pagespeed",
       "description": "",
       "format": "none",
       "gauge": {
@@ -643,11 +752,28 @@
       "tableColumn": "",
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_timetointeractive{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "instant": true,
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -677,6 +803,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
+      "datasource": "Prometheus-pagespeed",
       "description": "",
       "format": "none",
       "gauge": {
@@ -731,11 +858,28 @@
       "tableColumn": "",
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_first_cpu_idle_score{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "instant": true,
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -772,6 +916,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/speed-index).",
       "fill": 2,
       "gridPos": {
@@ -808,12 +953,29 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_speedindex_displayvalue{url=\"$url\"}",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "instant": false,
           "interval": "",
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -888,6 +1050,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/first-contentful-paint).",
       "fill": 2,
       "gridPos": {
@@ -924,12 +1087,29 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_first_contentful_paint_displayvalue{url=\"$url\"}",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "instant": false,
           "interval": "",
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -988,6 +1168,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Time to interactive is the amount of time it takes for the page to become fully interactive. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/consistently-interactive).",
       "fill": 1,
       "gridPos": {
@@ -1022,10 +1203,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_timetointeractive_displayvalue{url=\"$url\"}",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -1100,6 +1298,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "First Meaningful Paint measures when the primary content of a page is visible. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint).",
       "fill": 1,
       "gridPos": {
@@ -1134,10 +1333,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_first_meaningful_paint_displayvalue{url=\"$url\"}",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -1212,6 +1428,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Consider reducing the time spent parsing, compiling and executing JS.",
       "fill": 1,
       "gridPos": {
@@ -1245,10 +1462,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_mainthread_work_breakdown_displayvalue{url=\"$url\"}",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -1298,6 +1532,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "First CPU Idle marks the first time at which the page's main thread is quiet enough to handle input. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/first-interactive).",
       "fill": 1,
       "gridPos": {
@@ -1332,10 +1567,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_first_cpu_idle_score_displayvalue{url=\"$url\"}",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -1398,6 +1650,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Общая скорость загрузки страницы в сек",
       "fill": 1,
       "gridPos": {
@@ -1431,11 +1684,28 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_total_time_page_load{url=\"$url\"} / 10000",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "instant": false,
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -1519,6 +1789,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Redirects introduce additional delays before the page can be loaded. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/redirects).",
       "fill": 1,
       "gridPos": {
@@ -1552,10 +1823,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_redirects{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -1660,7 +1948,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": "Prometheus-pagespeed",
       "description": "Сколько мс можно выкружить для страницы если все сделать\" правильно\"",
       "format": "none",
       "gauge": {
@@ -1716,6 +2004,7 @@
         {
           "expr": "{url=\"$url\", type=\"overall\", id=\"redirects\"}",
           "format": "time_series",
+          "instant": true,
           "intervalFactor": 1,
           "legendFormat": "$url",
           "refId": "A"
@@ -1741,6 +2030,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn more](https://developers.google.com/speed/docs/insights/MinifyResources).",
       "fill": 1,
       "gridPos": {
@@ -1774,10 +2064,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_unminified_javascript{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -1881,7 +2188,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": "Prometheus-pagespeed",
       "description": "Сколько мс можно выкружить для страницы если все сделать\" правильно\"",
       "format": "none",
       "gauge": {
@@ -1962,6 +2269,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Consider using <link rel=preload> to prioritize fetching resources that are currently requested later in page load. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/preload).",
       "fill": 1,
       "gridPos": {
@@ -1995,10 +2303,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_uses_rel_preconnect{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -2102,7 +2427,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": "Prometheus-pagespeed",
       "description": "Сколько мс можно выкружить для страницы если все сделать\" правильно\"",
       "format": "none",
       "gauge": {
@@ -2183,6 +2508,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Browser engineers recommend pages contain fewer than ~1,500 DOM elements. The sweet spot is a tree depth < 32 elements and fewer than 60 children/parent element. A large DOM can increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn more](https://developers.google.com/web/tools/lighthouse/audits/dom-size)",
       "fill": 1,
       "gridPos": {
@@ -2216,10 +2542,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_dom_size{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -2323,7 +2666,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": "Prometheus-pagespeed",
       "description": "",
       "format": "none",
       "gauge": {
@@ -2404,6 +2747,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Image formats like JPEG 2000, JPEG XR, and WebP often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/webp).",
       "fill": 1,
       "gridPos": {
@@ -2437,10 +2781,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_uses_webp_images{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -2511,10 +2872,122 @@
       }
     },
     {
+      "content": "\n# Uses webp images\n\nImage formats like JPEG 2000, JPEG XR, and WebP often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/webp).\n\noverallSavingsMs - на сколько мс можно ускорить страницу\n\n\n\n\n",
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 77
+      },
+      "id": 87,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "Сколько мс можно выкружить для страницы если все сделать\" правильно\"",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 7,
+        "x": 17,
+        "y": 82
+      },
+      "id": 88,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " ms",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "{url=\"$url\", type=\"overall\", id=\"uses_webp_images\"}",
+          "format": "time_series",
+          "instant": false,
+          "intervalFactor": 1,
+          "legendFormat": "$url",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "1,2;",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "overallSavingsMs - текущее",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/network-payloads).",
       "fill": 1,
       "gridPos": {
@@ -2548,10 +3021,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_total_byte_weight_score{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -2622,10 +3112,122 @@
       }
     },
     {
+      "content": "\n# Total byte weight\n\n\"Large network payloads cost users real money and are highly correlated with long load times. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/network-payloads).\n\nРекомендовано не более 1600 kb\n\n\n\n\n",
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 85
+      },
+      "id": 89,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "Большого размера пакеты могут тратить много времени на загрузку по сети",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 7,
+        "x": 17,
+        "y": 90
+      },
+      "id": 90,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "display_value",
+      "targets": [
+        {
+          "expr": "pagespeed_total_byte_weight_displayvalue{url=\"$url\"}",
+          "format": "table",
+          "instant": false,
+          "intervalFactor": 1,
+          "legendFormat": "{{display_value}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Total size payloads - текущее",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Remove dead rules from stylesheets and defer the loading of CSS not used for above-the-fold content to reduce unnecessary bytes consumed by network activity. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/unused-css).",
       "fill": 1,
       "gridPos": {
@@ -2659,10 +3261,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_unused_css_rules{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -2733,10 +3352,208 @@
       }
     },
     {
+      "content": "\n# Unused css rules\n\nRemove dead rules from stylesheets and defer the loading of CSS not used for above-the-fold content to reduce unnecessary bytes consumed by network activity. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/unused-css).\n\n\n\n\n",
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 93
+      },
+      "id": 91,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "Сколько мс можно выкружить для страницы если все сделать\" правильно\"",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 7,
+        "x": 17,
+        "y": 97
+      },
+      "id": 93,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " ms",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "__name__",
+      "targets": [
+        {
+          "expr": "{url=\"$url\", type=\"overall\", id=\"unused_css_rules\"}",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "$url",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "1,2;",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "overallSavingsMs - текущее",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "Количество не используемых но загружаемых на страницу css  правил",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 7,
+        "x": 17,
+        "y": 99
+      },
+      "id": 92,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "displayValue",
+      "targets": [
+        {
+          "expr": "pagespeed_unused_css_rules_displayvalue{url=\"$url\"}",
+          "format": "table",
+          "instant": false,
+          "intervalFactor": 1,
+          "legendFormat": "{{display_value}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Неиспользуемых css правил - текущее",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/oversized-images).",
       "fill": 1,
       "gridPos": {
@@ -2770,10 +3587,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_uses_responsive_images{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -2844,10 +3678,122 @@
       }
     },
     {
+      "content": "\n# Properly size images\n\nServe images that are appropriately-sized to save cellular data and improve load time. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/oversized-images).\n\n\n\n",
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 101
+      },
+      "id": 94,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "Сколько мс можно выкружить для страницы если все сделать\" правильно\"",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 106
+      },
+      "id": 95,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " ms",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "__name__",
+      "targets": [
+        {
+          "expr": "{url=\"$url\", type=\"overall\", id=\"uses_responsive_images\"}",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "$url",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "1,2;",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "overallSavingsMs - текущее",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/offscreen-images).",
       "fill": 1,
       "gridPos": {
@@ -2881,10 +3827,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_offscreen_images{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -2955,10 +3918,208 @@
       }
     },
     {
+      "content": "\n# Defer offscreen images\n\nConsider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/offscreen-images).\n\n\n",
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 110
+      },
+      "id": 96,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "Сколько мс можно выкружить для страницы если все сделать\" правильно\"",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 7,
+        "x": 17,
+        "y": 114
+      },
+      "id": 97,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " ms",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "__name__",
+      "targets": [
+        {
+          "expr": "{url=\"$url\", type=\"overall\", id=\"offscreen_images\"}",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "$url",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "1,2;",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "overallSavingsMs - текущее",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 7,
+        "x": 17,
+        "y": 117
+      },
+      "id": 98,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "displayValue",
+      "targets": [
+        {
+          "expr": "pagespeed_offscreen_images_displayvalue{url=\"$url\"}",
+          "format": "table",
+          "instant": false,
+          "intervalFactor": 1,
+          "legendFormat": "{{display_value}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Cохранить кб - текущее",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Server latencies can impact web performance. If the server latency of an origin is high, it's an indication the server is overloaded or has poor backend performance. [Learn more](https://hpbn.co/primer-on-web-performance/#analyzing-the-resource-waterfall).",
       "fill": 1,
       "gridPos": {
@@ -2992,10 +4153,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_network_server_latency_displayvalue{url=\"$url\"}",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -3041,10 +4219,122 @@
       }
     },
     {
+      "content": "\n# Server Backend Latencies\n\nServer latencies can impact web performance. If the server latency of an origin is high, it's an indication the server is overloaded or has poor backend performance. [Learn more](https://hpbn.co/primer-on-web-performance/#analyzing-the-resource-waterfall).\n",
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 119
+      },
+      "id": 99,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "Наличие задержки от бэкенда в ms",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 124
+      },
+      "id": 100,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " ms",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "Value",
+      "targets": [
+        {
+          "expr": "pagespeed_network_server_latency_displayvalue{url=\"$url\"}",
+          "format": "table",
+          "instant": false,
+          "intervalFactor": 1,
+          "legendFormat": "{{display_value}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Display Value",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Minifying CSS files can reduce network payload sizes. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/minify-css).",
       "fill": 1,
       "gridPos": {
@@ -3078,10 +4368,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_unminified_css{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -3152,14 +4459,126 @@
       }
     },
     {
+      "content": "\n# Minify CSS\n\nMinifying CSS files can reduce network payload sizes. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/minify-css)",
+      "gridPos": {
+        "h": 6,
+        "w": 7,
+        "x": 17,
+        "y": 128
+      },
+      "id": 101,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "Сколько мс можно выкружить для страницы если все сделать\" правильно\"",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 7,
+        "x": 17,
+        "y": 134
+      },
+      "id": 102,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " ms",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "__name__",
+      "targets": [
+        {
+          "expr": "{url=\"$url\", type=\"overall\", id=\"unminified_css\"}",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "$url",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "1,2;",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "overallSavingsMs - текущее",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/bootup).",
       "fill": 1,
       "gridPos": {
-        "h": 8,
+        "h": 9,
         "w": 17,
         "x": 0,
         "y": 137
@@ -3189,10 +4608,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_bootup_time{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -3263,17 +4699,129 @@
       }
     },
     {
+      "content": "\n# Reduce JavaScript execution time\n\nConsider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/bootup)",
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 137
+      },
+      "id": 103,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 142
+      },
+      "id": 104,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " sec",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "Value",
+      "targets": [
+        {
+          "expr": "pagespeed_bootup_time_displayvalue{url=\"$url\"}",
+          "format": "table",
+          "instant": false,
+          "intervalFactor": 1,
+          "legendFormat": "{{display_value}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Display Value",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Consider adding preconnect or dns-prefetch resource hints to establish early connections to important third-party origins. [Learn more](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect).",
       "fill": 1,
       "gridPos": {
-        "h": 7,
+        "h": 8,
         "w": 17,
         "x": 0,
-        "y": 145
+        "y": 146
       },
       "id": 41,
       "legend": {
@@ -3300,10 +4848,28 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "pagespeed_uses_rel_preconnect{url=\"$url\"}",
+          "application": {
+            "filter": ""
+          },
+          "expr": "pagespeed_uses_rel_preconnect{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "instant": false,
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -3374,17 +4940,129 @@
       }
     },
     {
+      "content": "\n# Preconnect to required origins\n\nConsider adding preconnect or dns-prefetch resource hints to establish early connections to important third-party origins. [Learn more](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect).",
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 146
+      },
+      "id": 105,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "Сколько мс можно выкружить для страницы если все сделать\" правильно\"",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 7,
+        "x": 17,
+        "y": 151
+      },
+      "id": 106,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " ms",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "__name__",
+      "targets": [
+        {
+          "expr": "{url=\"$url\", type=\"overall\", id=\"uses_rel_preconnect\"}",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "$url",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "1,2;",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "overallSavingsMs - текущее",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Estimated Input Latency is an estimate of how long your app takes to respond to user input, in milliseconds, during the busiest 5s window of page load. If your latency is higher than 50 ms, users may perceive your app as laggy. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/estimated-input-latency)",
       "fill": 1,
       "gridPos": {
         "h": 9,
         "w": 17,
         "x": 0,
-        "y": 152
+        "y": 154
       },
       "id": 39,
       "legend": {
@@ -3411,10 +5089,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_estimated_input_latency_time{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -3485,17 +5180,129 @@
       }
     },
     {
+      "content": "\n# Estimated Input Latency\n\nEstimated Input Latency is an estimate of how long your app takes to respond to user input, in milliseconds, during the busiest 5s window of page load. If your latency is higher than 50 ms, users may perceive your app as laggy. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/estimated-input-latency).",
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 154
+      },
+      "id": 107,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 159
+      },
+      "id": 108,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "ms",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "Value",
+      "targets": [
+        {
+          "expr": "pagespeed_estimated_input_latency_displayvalue{url=\"$url\"}",
+          "format": "table",
+          "instant": false,
+          "intervalFactor": 1,
+          "legendFormat": "{{display_value}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "45,50",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Display Value",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds.",
       "fill": 1,
       "gridPos": {
         "h": 9,
         "w": 17,
         "x": 0,
-        "y": 161
+        "y": 163
       },
       "id": 37,
       "legend": {
@@ -3522,10 +5329,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_total_blocking_time{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -3596,17 +5420,129 @@
       }
     },
     {
+      "content": "\n# Total Blocking Time\n\nSum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds.",
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 163
+      },
+      "id": 109,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 168
+      },
+      "id": 110,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "ms",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "Value",
+      "targets": [
+        {
+          "expr": "pagespeed_total_blocking_time_displayvalue{url=\"$url\"}",
+          "format": "table",
+          "instant": false,
+          "intervalFactor": 1,
+          "legendFormat": "{{display_value}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "45,50",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Display Value",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "The maximum potential First Input Delay that your users could experience is the duration, in milliseconds, of the longest task. [Learn more](https://developers.google.com/web/updates/2018/05/first-input-delay).",
       "fill": 1,
       "gridPos": {
         "h": 9,
         "w": 17,
         "x": 0,
-        "y": 170
+        "y": 172
       },
       "id": 35,
       "legend": {
@@ -3633,10 +5569,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_max_potential_fid{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -3707,17 +5660,129 @@
       }
     },
     {
+      "content": "\n# Max Potential First Input Delay\n\nThe maximum potential First Input Delay that your users could experience is the duration, in milliseconds, of the longest task. [Learn more](https://developers.google.com/web/updates/2018/05/first-input-delay).",
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 172
+      },
+      "id": 111,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 177
+      },
+      "id": 112,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "ms",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "Value",
+      "targets": [
+        {
+          "expr": "pagespeed_max_potential_fid_displayvalue{url=\"$url\"}",
+          "format": "table",
+          "instant": false,
+          "intervalFactor": 1,
+          "legendFormat": "{{display_value}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "45,50",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Display Value",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/cache-policy).",
       "fill": 1,
       "gridPos": {
         "h": 9,
         "w": 17,
         "x": 0,
-        "y": 179
+        "y": 181
       },
       "id": 33,
       "legend": {
@@ -3744,10 +5809,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_uses_long_cache_ttl{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -3818,17 +5900,129 @@
       }
     },
     {
+      "content": "\n# Serve static assets with an efficient cache policy\n\nA long cache lifetime can speed up repeat visits to your page. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/cache-policy).",
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 181
+      },
+      "id": 113,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 186
+      },
+      "id": 114,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " resources found",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "Value",
+      "targets": [
+        {
+          "expr": "pagespeed_uses_long_cache_ttl_displayvalue{url=\"$url\"}",
+          "format": "table",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "{{display_value}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "2,10",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Display Value",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Optimized images load faster and consume less cellular data. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/optimize-images).",
       "fill": 1,
       "gridPos": {
         "h": 9,
         "w": 17,
         "x": 0,
-        "y": 188
+        "y": 190
       },
       "id": 31,
       "legend": {
@@ -3855,10 +6049,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_uses_optimized_images{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -3929,17 +6140,129 @@
       }
     },
     {
+      "content": "\n# Efficiently encode images\n\nOptimized images load faster and consume less cellular data. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/optimize-images)",
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 190
+      },
+      "id": 115,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "Сколько мс можно выкружить для страницы если все сделать\" правильно\"",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 195
+      },
+      "id": 116,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " ms",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "__name__",
+      "targets": [
+        {
+          "expr": "{url=\"$url\", type=\"overall\", id=\"uses_optimized_images\"}",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "$url",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "overallSavingsMs - текущее",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/text-compression).",
       "fill": 1,
       "gridPos": {
         "h": 9,
         "w": 17,
         "x": 0,
-        "y": 197
+        "y": 199
       },
       "id": 29,
       "legend": {
@@ -3966,10 +6289,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_uses_text_compression{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -4040,17 +6380,129 @@
       }
     },
     {
+      "content": "\n# Enable text compression\n\nText-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/text-compression)",
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 199
+      },
+      "id": 117,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "Сколько мс можно выкружить для страницы если все сделать\" правильно\"",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 204
+      },
+      "id": 118,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " ms",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "__name__",
+      "targets": [
+        {
+          "expr": "{url=\"$url\", type=\"overall\", id=\"uses_text_compression\"}",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "$url",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "overallSavingsMs - текущее",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Prometheus-pagespeed",
       "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/blocking-resources).",
       "fill": 1,
       "gridPos": {
         "h": 9,
         "w": 17,
         "x": 0,
-        "y": 206
+        "y": 208
       },
       "id": 27,
       "legend": {
@@ -4077,10 +6529,27 @@
       "steppedLine": false,
       "targets": [
         {
+          "application": {
+            "filter": ""
+          },
           "expr": "pagespeed_render_blocking_resources{url=\"$url\"} * 100",
           "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
           "intervalFactor": 1,
+          "item": {
+            "filter": ""
+          },
           "legendFormat": "$url",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
           "refId": "A"
         }
       ],
@@ -4151,12 +6620,123 @@
       }
     },
     {
+      "content": "\n# Eliminate render-blocking resources\n\nResources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/blocking-resources)",
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 208
+      },
+      "id": 119,
+      "links": [],
+      "mode": "markdown",
+      "options": {},
+      "targets": [
+        {
+          "expr": "",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Описание",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus-pagespeed",
+      "description": "",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 213
+      },
+      "id": 120,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " ms",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "Value",
+      "targets": [
+        {
+          "expr": "pagespeed_render_blocking_resources_displayvalue{url=\"$url\"}",
+          "format": "table",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "{{display_value}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "300,600",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Display Value",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "name"
+    },
+    {
       "collapsed": true,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 215
+        "y": 217
       },
       "id": 21,
       "panels": [
@@ -4165,6 +6745,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
+          "datasource": "Prometheus-pagespeed",
           "fill": 1,
           "gridPos": {
             "h": 8,
@@ -4197,9 +6778,26 @@
           "steppedLine": false,
           "targets": [
             {
+              "application": {
+                "filter": ""
+              },
               "expr": "topk(5, pagespeed_speedindex{url=\"$url\"}) * 100",
               "format": "time_series",
+              "functions": [],
+              "group": {
+                "filter": ""
+              },
+              "host": {
+                "filter": ""
+              },
               "intervalFactor": 1,
+              "item": {
+                "filter": ""
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
               "refId": "A"
             }
           ],
@@ -4258,19 +6856,19 @@
       {
         "allValue": null,
         "current": {
-          "isNone": true,
-          "text": "None",
-          "value": ""
+          "tags": [],
+          "text": "https://www.reg.ru/",
+          "value": "https://www.reg.ru/"
         },
-        "datasource": "Prometheus",
-        "definition": "pagespeed_speedindex_info",
+        "datasource": "Prometheus-pagespeed",
+        "definition": "pagespeed_speedindex",
         "hide": 0,
         "includeAll": false,
         "label": "URL",
         "multi": false,
         "name": "url",
         "options": [],
-        "query": "pagespeed_speedindex_info",
+        "query": "pagespeed_speedindex",
         "refresh": 1,
         "regex": "/.*url=\"([^\"]*).*/",
         "skipUrlSync": false,
@@ -4284,11 +6882,10 @@
       {
         "allValue": null,
         "current": {
-          "isNone": true,
-          "text": "None",
-          "value": ""
+          "text": "pagespeed_offscreen_images_overall{id=\"offscreen_images\",instance=\"172.17.0.1:8000\",job=\"system_mark47\",type=\"overall\",url=\"https://www.reg.ru/\"}",
+          "value": "pagespeed_offscreen_images_overall{id=\"offscreen_images\",instance=\"172.17.0.1:8000\",job=\"system_mark47\",type=\"overall\",url=\"https://www.reg.ru/\"}"
         },
-        "datasource": "Prometheus",
+        "datasource": "Prometheus-pagespeed",
         "definition": "{url=\"$url\", type=\"overall\"}",
         "hide": 2,
         "includeAll": false,
@@ -4339,7 +6936,7 @@
     ]
   },
   "timezone": "",
-  "title": "FrontEnd Metrics",
+  "title": "REG.RU - pagespeed - detail",
   "uid": "9mhrQ0dWk",
-  "version": 226
+  "version": 71
 }
