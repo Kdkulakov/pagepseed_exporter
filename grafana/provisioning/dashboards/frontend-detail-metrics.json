@@ -6882,8 +6882,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "pagespeed_offscreen_images_overall{id=\"offscreen_images\",instance=\"172.17.0.1:8000\",job=\"system_mark47\",type=\"overall\",url=\"https://www.reg.ru/\"}",
-          "value": "pagespeed_offscreen_images_overall{id=\"offscreen_images\",instance=\"172.17.0.1:8000\",job=\"system_mark47\",type=\"overall\",url=\"https://www.reg.ru/\"}"
+          "text": "pagespeed_offscreen_images_overall{id=\"offscreen_images\",instance=\"172.17.0.1:8000\",type=\"overall\"",
+          "value": "pagespeed_offscreen_images_overall{id=\"offscreen_images\",instance=\"172.17.0.1:8000\",type=\"overall\"}"
         },
         "datasource": "Prometheus-pagespeed",
         "definition": "{url=\"$url\", type=\"overall\"}",
